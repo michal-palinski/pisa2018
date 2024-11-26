@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap"
+          rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+
+    <title>PISA 2018</title>
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+          crossorigin="anonymous" />
+
+    <script src="./js/multilevel_dropdown.js"></script>
+    <script src="./js/circles.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="https://www.amcharts.com/lib/4/geodata/worldHigh.js"></script>
+    <script src="https://www.amcharts.com/lib/4/maps.js"></script>
+</head>
+
+<body dir="ltr">
+    <div class="px-2">
+
+        <div class="card mt-4">
+            <div>
+                <div class="d-flex justify-content-between">
+                    <h5 class=" my-2 header-title-primary">
+                        PISA Low and high achievers | Math
+                    </h5>
+
+                    <div class="btn-group" role="group" style="position:unset !important">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            Choose analysis
+                        </button>
+
+                        <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#"> PISA overview &raquo; </a>
+                           <ul class="submenu dropdown-menu" >
+                            <li><a class="dropdown-item" href="./pisa-1-read.html">Reading</a></li>
+                            <li><a class="dropdown-item" href="./pisa-1-math.html">Math</a></li>
+                            <li><a class="dropdown-item" href="./pisa-1-science.html">Science</a></li>
+                         </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#"> Low & high achievers &raquo; </a>
+                           <ul class="submenu dropdown-menu">
+                             <li><a class="dropdown-item" href="./pisa-2-read.html">Reading</a></li>
+                             <li><a class="dropdown-item" href="./pisa-2-math.html">Math</a></li>
+                             <li><a class="dropdown-item" href="./pisa-2-science.html">Science</a></li>
+                         </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#"> Gender gap &raquo;</a>
+                           <ul class="submenu dropdown-menu">
+                             <li><a class="dropdown-item" href="./pisa-3-read.html">Reading</a></li>
+                             <li><a class="dropdown-item" href="./pisa-3-math.html">Math</a></li>
+                             <li><a class="dropdown-item" href="./pisa-3-science.html">Science</a></li>
+                         </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#"> Regional context &raquo;</a>
+                           <ul class="submenu dropdown-menu">
+                             <li><a class="dropdown-item" href="./pisa-4-read.html">Reading</a></li>
+                             <li><a class="dropdown-item" href="./pisa-4-math.html">Math</a></li>
+                             <li><a class="dropdown-item" href="./pisa-4-science.html">Science</a></li>
+                         </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#"> Social context &raquo;</a>
+                           <ul class="submenu dropdown-menu">
+                             <li><a class="dropdown-item" href="./pisa-5-read.html">Reading</a></li>
+                             <li><a class="dropdown-item" href="./pisa-5-math.html">Math</a></li>
+                             <li><a class="dropdown-item" href="./pisa-5-science.html">Science</a></li>
+                         </ul>
+                        </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="card mt-4">
+            <div class="d-flex justify-content-between block-header">
+                <h5 class=" my-2 header-title-secondary">
+                  Proficiency levels
+                </h5>
+
+                <!-- <div class="m-1">
+                    <img src="images/icon-info.png" style="height:25px;" />
+                </div> -->
+            </div>
+
+            <div class="mx-3  p-5">
+                <div style="height: 400px; " id="chart_12" dir="ltr">
+                    <script src="./js/chart_12.js"></script>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="d-flex justify-content-between block-header">
+                <h5 class=" my-2 header-title-secondary">
+                Cross-country comparison
+                </h5>
+
+                <div class="m-1">
+                    <img src="images/icon-info.png" style="height:25px;" data-bs-toggle="modal" data-bs-target="#exampleModal0" />
+                </div>
+            </div>
+
+            <div class="mx-3 p-5">
+              <div style="height: 600px; " id="chart_13" dir="ltr">
+                  <script src="./js/chart_13.js"></script>
+              </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+  <div class="modal fade" id="exampleModal0" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" dir="ltr">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+ Relative performance of low- and high-achieving students
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Figure compares scores at the 10th percentile of mathematics performance distribution across the countries with the biggest education systems. One can note that even low-achieving students in the four Chinese provinces outperform most students in other countries scoring at 486 points on the PISA scale. In other top-achieving countries, the weakest students also perform quite high, e.g., above 400 points in Japan and close to 400 points in Poland, Chinese Taipei, Korea, or Canada. In Saudi Arabia, but also in Argentina and Marocco, low-achieving students perform at very low levels around 270 score points, meaning that they lack basic-level mathematics skills and are not able to answer most of the PISA test mathematics items. These students demonstrate skills in mathematics that are highly unsatisfactory, considering that they spent nearly ten years in formal education. The performance of the weakest students is similarly low not only in Argentina and Marocco but also in countries like Brazil or Indonesia and even lower in the Philippines.
+</br></br>
+      Figure shows similar comparisons for the highest-achieving students, i.e., those with mathematics scores at the 90th percentile for a country distribution. A list of countries at the top is almost the same with students from China, Taipei, Korea, Japan, and Poland in the top ranking positions among the best students from larger education systems. Interestingly, the gap between the best students in China and other countries is much smaller than the difference among the weakest students. It shows that the average advantage of Chinese students is mostly driven by their relatively higher performance of their weakest students. In contrast, the performance of the best students is more similar across the best countries. Still, Chinese students excel in mathematics, and their performance is at levels far above those found in most states.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script>
+
+
+        window.addEventListener('load', () => {
+
+            parent.postMessage(JSON.stringify({ event_id: 'handshake', data: { height: document.body.scrollHeight } }), '*');
+
+            function onResize() {
+                parent.postMessage(JSON.stringify({ event_id: 'resized', data: { height: document.body.scrollHeight } }), '*');
+            }
+
+            window.addEventListener('resize', onResize, false);
+        })
+        // $(document).ready(function () {
+        //     $('.btnInfo').click(function () {
+        //         var id = $(this).data('id');
+        //         $('#chart_' + id).toggle();
+        //         $('.divChartInfo' + id).toggle();
+        //     });
+        // });
+    </script>
+
+    <script>
+  		Circles.create({
+  			id:'circles-1',
+  			radius:80,
+  			value:399,
+  			maxValue:600,
+  			width:7,
+  			text: 399,
+  			colors:['#f1f1f1', '#FF9E27'],
+  			duration:400,
+  			wrpClass:'circles-wrp',
+  			textClass:'circles-text',
+  			styleWrapper:true,
+  			styleText:true
+  		})
+
+  		Circles.create({
+  			id:'circles-2',
+  			radius:80,
+  			value:373,
+  			maxValue:600,
+  			width:7,
+  			text: 373,
+  			colors:['#f1f1f1', '#2BB930'],
+  			duration:400,
+  			wrpClass:'circles-wrp',
+  			textClass:'circles-text',
+  			styleWrapper:true,
+  			styleText:true
+  		})
+
+  		Circles.create({
+  			id:'circles-3',
+  			radius:80,
+  			value:386,
+  			maxValue:600,
+  			width:7,
+  			text: 386,
+  			colors:['#f1f1f1', '#F25961'],
+  			duration:400,
+  			wrpClass:'circles-wrp',
+  			textClass:'circles-text',
+  			styleWrapper:true,
+  			styleText:true
+  		})
+
+  	</script>
+
+    <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" dir="ltr">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Percentage of students at each proficiency level in reading</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+           The average performance of countries mask large difference within their education systems. In general, the differences between students and schools in each country are larger or comparable to differences between countries. However, in some countries these disparities are higher, while in some smaller and the education systems should be compared not only in terms of average performance but also how unequal are the results of their students. One way of looking at differences between students is to compare how many of them reach international benchmarks, which in PISA are called proficiency levels. In reading, PISA 2018 reports results using nine proficiency levels. Detailed definitions of each level are provided in chapter 2, while below student results are reported. Chart compares distribution of students across reading proficiency levels in Saudi Arabia and compares that to the average OECD distribution. There are two key benchmarks in PISA that are used to compare countries. The proficiency level 2 is the basic proficiency benchmark, which is used across countries to compare the percentage of students that do not possess sufficient reading skills to participate in the economy and society. In European Union, this benchmark is used to monitor how member countries fight with student underperformance. In many other countries similar performance benchmarks were established and it is generally accepted that most students should demonstrate reading skills above this benchmark at the age of 15.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

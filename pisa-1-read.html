@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap"
+          rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+
+    <title>PISA 2018</title>
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+          crossorigin="anonymous" />
+
+    <script src="./js/multilevel_dropdown.js"></script>
+    <script src="./js/circles.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="https://www.amcharts.com/lib/4/geodata/worldHigh.js"></script>
+    <script src="https://www.amcharts.com/lib/4/maps.js"></script>
+</head>
+
+<body dir="ltr">
+    <div class="px-2">
+
+        <div class="card mt-4">
+            <div>
+                <div class="d-flex justify-content-between">
+                    <h5 class=" my-2 header-title-primary">
+                        PISA overview | Reading
+                    </h5>
+
+                    <div class="btn-group" role="group" style="position:unset !important">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            Choose analysis
+                        </button>
+
+                        <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#"> PISA overview &raquo; </a>
+                           <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="./pisa-1-read.html">Reading</a></li>
+                            <li><a class="dropdown-item" href="./pisa-1-math.html">Math</a></li>
+                            <li><a class="dropdown-item" href="./pisa-1-science.html">Science</a></li>
+                         </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#"> Low & high achievers &raquo; </a>
+                           <ul class="submenu dropdown-menu">
+                             <li><a class="dropdown-item" href="./pisa-2-read.html">Reading</a></li>
+                             <li><a class="dropdown-item" href="./pisa-2-math.html">Math</a></li>
+                             <li><a class="dropdown-item" href="./pisa-2-science.html">Science</a></li>
+                         </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#"> Gender gap &raquo;</a>
+                           <ul class="submenu dropdown-menu">
+                             <li><a class="dropdown-item" href="./pisa-3-read.html">Reading</a></li>
+                             <li><a class="dropdown-item" href="./pisa-3-math.html">Math</a></li>
+                             <li><a class="dropdown-item" href="./pisa-3-science.html">Science</a></li>
+                         </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#"> Regional context &raquo;</a>
+                           <ul class="submenu dropdown-menu">
+                             <li><a class="dropdown-item" href="./pisa-4-read.html">Reading</a></li>
+                             <li><a class="dropdown-item" href="./pisa-4-math.html">Math</a></li>
+                             <li><a class="dropdown-item" href="./pisa-4-science.html">Science</a></li>
+                         </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#"> Social context &raquo;</a>
+                           <ul class="submenu dropdown-menu">
+                             <li><a class="dropdown-item" href="./pisa-5-read.html">Reading</a></li>
+                             <li><a class="dropdown-item" href="./pisa-5-math.html">Math</a></li>
+                             <li><a class="dropdown-item" href="./pisa-5-science.html">Science</a></li>
+                         </ul>
+                        </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card first-row">
+                    <div class="d-flex justify-content-between block-header">
+                        <h5 class=" my-2 header-title-secondary">
+                          Saudi Arabia 2018 results
+                        </h5>
+
+                        <div class="m-1">
+                            <img src="images/icon-info.png" style="height:25px;" data-bs-toggle="modal" data-bs-target="#exampleModal0" />
+                        </div>
+                    </div>
+
+                    <div class="mx-3  p-5">
+                    <div>
+                    <div class="d-flex flex-wrap justify-content-around pb-2 pt-4">
+                      <div class="px-2 pb-2 pb-md-0 text-center">
+                        <div id="circles-1"></div>
+                        <h6 class="mt-3 mb-0">Reading</h6>
+                      </div>
+                      <div class="px-2 pb-2 pb-md-0 text-center">
+                        <div id="circles-2"></div>
+                        <h6 class="mt-3 mb-0">Math</h6>
+                      </div>
+                      <div class="px-2 pb-2 pb-md-0 text-center">
+                        <div id="circles-3"></div>
+                        <h6 class="mt-3 mb-0">Science</h6>
+                      </div>
+                    </div>
+</div>
+</div>
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+                <div class="card first-row">
+                    <div class="d-flex justify-content-between block-header">
+
+
+                        <h5 class=" my-2 header-title-secondary">
+                          Proficiency levels (% of students)
+                        </h5>
+
+                        <div class="m-1">
+                            <img src="images/icon-info.png" style="height:25px;" data-bs-toggle="modal" data-bs-target="#exampleModal1" />
+                        </div>
+                    </div>
+
+                    <div class="mx-3  p-5">
+                        <div style="height: 250px; " id="chart_1" dir="ltr">
+                            <script src="./js/chart_1.js"></script>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="d-flex justify-content-between block-header">
+                <h5 class=" my-2 header-title-secondary">
+                  Cross-country comparison
+                </h5>
+
+                <div class="m-1">
+                    <img src="images/icon-info.png" style="height:25px;" data-bs-toggle="modal" data-bs-target="#exampleModal2" />
+                </div>
+            </div>
+
+            <div class="mx-3  p-5">
+                <div style="height: 600px; " id="chart_2" dir="ltr">
+                    <script src="./js/chart_2.js"></script>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="d-flex justify-content-between block-header">
+                <h5 class=" my-2 header-title-secondary">
+                  Country scores - map
+                </h5>
+
+                <div class="m-1">
+                    <!-- <img src="images/icon-info.png" style="height:25px; " /> -->
+                </div>
+            </div>
+
+            <div class="mx-3 p-5">
+              <div style="height: 600px; " id="chart_3" dir="ltr">
+                  <script src="./js/chart_3.js"></script>
+              </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+
+        window.addEventListener('load', () => {
+
+            parent.postMessage(JSON.stringify({ event_id: 'handshake', data: { height: document.body.scrollHeight } }), '*');
+
+            function onResize() {
+                parent.postMessage(JSON.stringify({ event_id: 'resized', data: { height: document.body.scrollHeight } }), '*');
+            }
+
+            window.addEventListener('resize', onResize, false);
+        })
+
+    </script>
+
+    <script>
+  		Circles.create({
+  			id:'circles-1',
+  			radius:80,
+  			value:399,
+  			maxValue:600,
+  			width:7,
+  			text: 399,
+  			colors:['#f1f1f1', '#FF9E27'],
+  			duration:400,
+  			wrpClass:'circles-wrp',
+  			textClass:'circles-text',
+  			styleWrapper:true,
+  			styleText:true
+  		})
+
+  		Circles.create({
+  			id:'circles-2',
+  			radius:80,
+  			value:373,
+  			maxValue:600,
+  			width:7,
+  			text: 373,
+  			colors:['#f1f1f1', '#2BB930'],
+  			duration:400,
+  			wrpClass:'circles-wrp',
+  			textClass:'circles-text',
+  			styleWrapper:true,
+  			styleText:true
+  		})
+
+  		Circles.create({
+  			id:'circles-3',
+  			radius:80,
+  			value:386,
+  			maxValue:600,
+  			width:7,
+  			text: 386,
+  			colors:['#f1f1f1', '#F25961'],
+  			duration:400,
+  			wrpClass:'circles-wrp',
+  			textClass:'circles-text',
+  			styleWrapper:true,
+  			styleText:true
+  		})
+
+  	</script>
+
+    <!-- Modal -->
+  <div class="modal fade" id="exampleModal0" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" dir="ltr">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Chapter summary</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+           This chapter provides detailed overview of key results in reading from PISA 2018. Comparisons are provided with the 30 selected countries and for parts of Saudi Arabia.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Modal -->
+  <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" dir="ltr">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Percentage of students at each proficiency level in reading</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+           The average performance of countries mask large difference within their education systems. In general, the differences between students and schools in each country are larger or comparable to differences between countries. However, in some countries these disparities are higher, while in some smaller and the education systems should be compared not only in terms of average performance but also how unequal are the results of their students. One way of looking at differences between students is to compare how many of them reach international benchmarks, which in PISA are called proficiency levels. In reading, PISA 2018 reports results using nine proficiency levels. Chart compares distribution of students across reading proficiency levels in Saudi Arabia and compares that to the average OECD distribution. There are two key benchmarks in PISA that are used to compare countries. The proficiency level 2 is the basic proficiency benchmark, which is used across countries to compare the percentage of students that do not possess sufficient reading skills to participate in the economy and society. In European Union, this benchmark is used to monitor how member countries fight with student underperformance. In many other countries similar performance benchmarks were established and it is generally accepted that most students should demonstrate reading skills above this benchmark at the age of 15.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" dir="ltr">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+Cross country comparison
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Average performance in Saudi Arabia is statistically similar to performance of students in Albania, Argentina, Bosnia and Herzegovina, Peru, and Thailand. Figure shows that among countries with larger populations of students, 15-year-olds in Saudi Arabia performed better than their peers in Kazakhstan, Indonesia, Morocco, and Philippines. Student reading performance in Saudi Arabia is lower by around 30 score points or less than performance of students in countries like UAE, Mexico, Jordan, Malaysia, Brazil, Colombia, and Argentina. These countries show better results but the gap with Saudi students is equivalent to around one year of education or less.
+</br></br>
+Ten top performing countries in reading include parts of China (four inland provinces of Beijing, Shanghai, Jiangsu and Zhejiang, but also Macao and Hong Kong), other Asian countries like Singapore and Korea, three European countries - Estonia, Finland, and Poland – and Canada. Some of these countries have relatively small education systems, e.g. Estonia, but among countries of similar size or larger than Saudi Arabia, students from the four provinces of China (B-S-J-Z) perform much higher than other countries, followed by three countries with similar performance: Canada, Korea, and Poland. These countries, especially Chinese provinces, clearly outperform others by a relatively large margin. While their education systems should be studied and compared to policy and teaching practice in Saudi Arabia, their performance is much higher and the current achievements reflect decades of investment into education system and largely supportive society.
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+body {
+    background-color: #f2f2f2;
+    font-family: "Cairo", sans-serif;
+    overflow-x: hidden;
+}
+.first-row {
+  min-height: 400px;
+
+}
+.modal-body {
+    text-align: justify;
+}
+
+.card {
+    border-radius: 0.28rem !important;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important;
+}
+
+.c-primary {
+    color: #4c3d8f;
+}
+
+.c-secondary {
+    color: #474747;
+}
+
+.c-secondary-light {
+    color: #2aa7b1;
+}
+
+.header-title {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.7 !important;
+}
+
+.header-title-primary {
+    color: #474747;
+    font-size: 15px;
+    border-right: solid 4px #4c3d8f;
+    padding-right: 20px;
+}
+
+.header-title-secondary {
+    color: #767676;
+    font-size: 15px;
+    border-right: solid 4px #1e8ecd;
+    padding-right: 20px;
+}
+
+.block-header {
+    border-bottom: solid 3px #f2f2f2;
+}
+
+.btn-primary {
+    background-color: #4c3d8f;
+}
+
+.btn {
+    border-radius: 0 !important;
+}
+
+.tab-primary {
+    background-color: #3e539c;
+}
+
+.tab-secondary {
+    background-color: #d8d8d8;
+}
+.sm-text{
+    font-size:12px;
+
+}
+
+/* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+
+  /* .dropdown-menu {
+    width: 50%;
+  } */
+
+	.dropdown-menu li{
+		position: relative;
+
+	}
+	.dropdown-menu .submenu{
+		display: none;
+		position: absolute;
+		right:100%; top:-7px;
+	}
+	.dropdown-menu .submenu-left{
+		right:100%; left:auto;
+	}
+
+	.dropdown-menu > li:hover{ background-color: #f1f1f1 }
+	.dropdown-menu > li:hover > .submenu{
+		display: block;
+	}
+}
+/* ============ desktop view .end// ============ */
+
+/* ============ small devices ============ */
+@media (max-width: 991px) {
+
+.dropdown-menu .dropdown-menu{
+		/* margin-left:0.7rem; */
+    margin-right:0.7rem;
+    margin-bottom: .5rem;
+}
+
+}
+/* ============ small devices .end// ============ */
